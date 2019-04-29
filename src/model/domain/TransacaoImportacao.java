@@ -17,44 +17,19 @@ import javax.persistence.Table;
  *
  * @author Aline Morandi
  */
-@Entity
-@Table(name="transacao")
-public class TransacaoImportacao implements Lote {
-    
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id")
-    private Long id;
-    @Column(name="detalhe")
+
     private char detalhe;
-    @Column(name="numeroConta")
     private String numeroconta;
-    @Column(name="numeroPlastico")
     private String numeroplastico;
-    @Column(name="valorTransacao")
     private double valortransacao;
-    @Column(name="dataTransacao")
     private String datatransacao;
-    @Column(name="horaTransacao")
     private String horatransacao;
-    @Column(name="codigoEstabelecimento")
     private String codigoestabelecimento;
-    @Column(name="NumeroLote")
     private String numeroLote;
-    @Column(name="TipoLote")
     private String tipolote;
     
     
-    @Override
-    public Long getId() {
-         return id;
-    }
-
-    public void setId(Long id) {
-         this.id = id;
-    }
-
-    /**
+      /**
      * @return the detalhe
      */
     
