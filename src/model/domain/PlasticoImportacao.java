@@ -18,42 +18,17 @@ import model.domain.Lote;
  *
  * @author Aline Morandi
  */
-@Entity
-@Table(name="plastico")
-public class PlasticoImportacao implements Lote{
-    
-    @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
-    @Column(name="id")
-    private Long id;
-    @Column(name="detalhe")
+
     private char detalhe;
-    @Column(name="numeroConta")
     private String numerodaconta;
-    @Column(name="NomenoPlastico")
     private String nome_inserido_plastico;
-    @Column(name="cpf")
     private String cpf;
-    @Column(name="NumeroPlasticoGerado")
     private String numero_plastico_gerado;
-    @Column(name="NumeroLote")
     private String numeroLote;
-    @Column(name="TipoLote")
     private String tipolote;
     
-    public Long getId() {
-         return id;
-    }
-
-    public void setId(Long id) {
-         this.id = id;
-    }
-    /**
-     * @return the detalhe
-     */
-    
     public char getDetalhe() {
-        return detalhe;
+    return detalhe;
     }
 
     /**
@@ -64,7 +39,7 @@ public class PlasticoImportacao implements Lote{
     }
 
     /**
-     * @return the numerodaconta
+     * @return numerodaconta
      */
     
     public String getNumerodaconta() {
