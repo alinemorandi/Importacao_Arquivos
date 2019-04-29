@@ -10,39 +10,15 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import model.domain.Lote;
 
-@Entity
-@Table(name="Conta")
-public class ContaImportacao implements Lote {
-	
-        @Id
-        @GeneratedValue(strategy=GenerationType.IDENTITY)
-        @Column(name="id")
-        private Long id;
-        @Column(name="tipo")
-	private char tipo;
-        @Column(name="cpf")
-	private String cpf;
-        @Column(name="valor_Limite")
-	private Double valorLimite;
-        @Column(name="dia_Vencimento_Fatura")
-	private Integer diaVencimentoFatura;
-        @Column(name="Numero_Conta")
-	private String numeroConta;
-        @Column(name="Numero_Lote")
-        private String numeroLote;
-        @Column(name="TipoLote")
-        private String tipolote;
-        
-        
-        @Override
-        public Long getId() {
-              return id;
-        }
 
-        public void setId(Long id) {
-              this.id = id;
-        }
-        
+       	private char tipo;
+        private String cpf;
+       	private Double valorLimite;
+       	private Integer diaVencimentoFatura;
+       	private String numeroConta;
+        private String numeroLote;
+        private String tipolote;
+             
 	@Override
 	public String getTipoLote() {
 		return "Conta";
