@@ -9,47 +9,35 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import model.domain.Lote;
 
-@Entity
-@Table(name="Cliente")
+
 public class ClienteImportacao implements Lote {
 	
-	//TODO needs refactoring
-        @Id
-        @GeneratedValue(strategy=GenerationType.IDENTITY)
-        @Column(name="id")
-        private Long id;
-        @Column(name="tipo")
-	private char tipo;
-        @Column(name="cpf")
-	private String cpf;
-        @Column(name="nome")
-	private String nome;
-        @Column(name="endereco")
-	private String endereco;
-        @Column(name="bairro")
-	private String bairro;
-        @Column(name="cidade")
-	private String cidade;
-        @Column(name="estado")
-	private String estado;
-        @Column(name="dataHoraCadastro")
-	private Date dataHoraCadastro;
-        @Column(name="TipoLote")
+        private char tipo;
+      	private String cpf;
+        private String nome;
+    	private String endereco;
+        private String bairro;
+      	private String cidade;
+        private String estado;
+        private Date dataHoraCadastro;
         private String tipolote;
-        @Column(name="NumeroLote")
         private String numeroLote;
         
         public ClienteImportacao(){
-            
-        }
-        @Override
-        public Long getId() {
-              return id;
-        }
-        public void setId(Long id) {
-           this.id = id;
-        }
-	
+         
+	public String getTipolote() {
+        return tipolote;
+	}
+
+    public void setTipolote(String tipolote) {
+        this.tipolote = tipolote;
+    	}
+    private String numeroLote;
+
+    public ClienteImportacao() {
+
+    	}
+        	
 	@Override
 	public String getTipoLote() {
 		return "Cliente";
